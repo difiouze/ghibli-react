@@ -4,7 +4,7 @@ import Movie from '../components/Movie';
 const MovieList = ({movies}) => {
 
     return (
-        <div>
+        <div className="card__container">
             {movies.map(movie => (
                 <Movie  key={movie.id} 
                         title={movie.title}
@@ -13,7 +13,6 @@ const MovieList = ({movies}) => {
                         description={movie.description}
                         /> 
             ))}
-            <Movie />
         </div>
     )
 }

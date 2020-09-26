@@ -2,19 +2,17 @@ import React from 'react'
 
 const Movie = ({ title, director, description, release }) => {
     return (
-        <div>
-            <div className="card">
+            <div className="card__item">
                 <div className="card__title">
-                    <h1>{title}</h1>
+                    {title}
                 </div>
                 <div className="card__director">
                     <span>Directed by: {director} </span> 
                 </div>
-                <div className="card__movie">
+                <div className="card__release">
                     <span>Release date: </span>{release}</div>
-                <div className="card__movie">{description}</div>
+                <div className="card__description">{description}</div>
             </div>
-        </div>
     )
 }
 
