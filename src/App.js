@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import axios from 'axios';
+import MovieList from './components/MovieList';
 
 function App() {
+
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const result = await axios(`https://ghibliapi.herokuapp.com/films`);
+      console.log(result.data);
+      setMovies(result.data);
+    }
+    fetchMovies();
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MovieList movies= {movies}/>
     </div>
   );
 }
