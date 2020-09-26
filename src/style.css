@@ -29,6 +29,7 @@
   width: 100%;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .card__title {
@@ -37,5 +38,13 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.card__description {
+  padding-bottom: 20px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 /*# sourceMappingURL=style.css.map */

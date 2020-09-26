@@ -11,7 +11,7 @@ const Movie = ({ title, director, description, release }) => {
                 </div>
                 <div className="card__release">
                     <span>Release date: </span>{release}</div>
-                <div className="card__description">{description}</div>
+                <p className="card__description">{description}</p>
             </div>
     )
 }
