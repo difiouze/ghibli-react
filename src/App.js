@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import axios from 'axios';
 import MovieList from './components/MovieList';
-import logo from './img/logo.svg';
+import Header from './components/Header';
 
 function App() {
 
@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <img className="logo" src={logo} alt="logo"/>
-      <MovieList movies= {movies}/>
+      <Header />
+      <MovieList movies={movies} />
     </div>
   );
 }
