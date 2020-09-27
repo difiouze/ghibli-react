@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchMovies = async () => {
       const result = await axios(`https://ghibliapi.herokuapp.com/films`);
-      console.log(result.data);
+      //console.log(result.data);
       setMovies(result.data);
     }
     fetchMovies();
