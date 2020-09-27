@@ -28,6 +28,13 @@
     }
 }
 
+.fa-window-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
 .card {
     &__container {
         display: flex;

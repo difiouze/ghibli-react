@@ -1,7 +1,7 @@
 import React from 'react'
 import Movie from '../components/Movie';
 
-const MovieList = ({movies}) => {
+const MovieList = ({movies, setMovies}) => {
 
     return (
         <div className="card__container">
@@ -11,6 +11,9 @@ const MovieList = ({movies}) => {
                         director={movie.director}
                         release={movie.release_date}
                         description={movie.description}
+                        movie={movie}
+                        setMovies={setMovies}
+                        movies ={movies}
                         /> 
             ))}
         </div>

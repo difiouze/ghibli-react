@@ -1,8 +1,14 @@
 import React from 'react'
 
-const Movie = ({ title, director, description, release }) => {
+const Movie = ({ title, director, description, release, movies, setMovies, movie }) => {
+
+    const deleteHandler = () => {
+        setMovies(movies.filter((el) => el.id !== movie.id));
+      }
+
     return (
             <div className="card__item">
+                <i onClick={deleteHandler} className="far fa-window-close"></i>
                 <div className="card__title">
                     {title}
                 </div>

@@ -34,6 +34,17 @@
   margin-bottom: 40px;
 }
 
+.fa-window-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
 .card__container {
   display: -webkit-box;
   display: -ms-flexbox;
